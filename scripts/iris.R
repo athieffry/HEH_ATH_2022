@@ -1,13 +1,15 @@
-# IRIS EXERCICES
-# Axel - 2022
-
+# BASE R EXERCICES WITH THE IRIS DATASET
+# Axel Thieffry - October 2022
 
 # 1. load the iris dataset (included in base R) ####
+# --------------------------------------------------
 data(iris)
 
+
 # 2. inspect the iris dataset ####
+# --------------------------------
 iris
-type(iris)
+typeof(iris)
 str(iris)
 dim(iris)
 head(iris)
@@ -17,26 +19,31 @@ colnames(iris)
 rownames(iris)
 View(iris)
 
-# get the “Petal.Width” column:
-  # 1. still in a dataframe
 
-  # 2. as a simple vector
+# 3. get the “Petal.Width” column ####
+# ------------------------------------
+# a. still in a dataframe
+iris['Petal.Width']
 
-# For “Petal.Width” column, calculate: sum, mean, max, min
+# b. as a simple vector
+iris[['Petal.Width']]
+# or
+iris$Petal.Width
 
-# coerce to a matrix - what happened?
+
+# 4. For “Petal.Width” column, calculate: sum, mean, max, min ####
+# ----------------------------------------------------------------
+sum(iris$Petal.Width)
+mean(iris$Petal.Width)
+max(iris$Petal.Width)
+min(iris$Petal.Width)
+
+
+# 5. coerce to a matrix - what happened? ####
+# -------------------------------------------
 as.matrix(iris)
 
 
-
-
-install.packages('tidyverse')
-library(tidyverse)
-
-
-# gene expression dataframe
-mat <- round(matrix(rnorm(9, mean=5, sd=1.5), nrow=3))
-colnames(mat) <- c('wt_R1', 'wt_R2', 'wt_R3')
-rownames(mat) <- paste0('gene_', 1:3)
-
-tpm_norm <- colSums(mat)/10
+# 6. How many unique Sepal.Length measures exist? ####
+# ----------------------------------------------------
+length(unique(iris$Sepal.Length))
