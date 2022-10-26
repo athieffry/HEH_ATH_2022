@@ -1,7 +1,11 @@
-# load the iris dataset (included in base R)
+# IRIS EXERCICES
+# Axel - 2022
+
+
+# 1. load the iris dataset (included in base R) ####
 data(iris)
 
-# inspect the iris dataset
+# 2. inspect the iris dataset ####
 iris
 type(iris)
 str(iris)
@@ -24,3 +28,15 @@ View(iris)
 as.matrix(iris)
 
 
+
+
+install.packages('tidyverse')
+library(tidyverse)
+
+
+# gene expression dataframe
+mat <- round(matrix(rnorm(9, mean=5, sd=1.5), nrow=3))
+colnames(mat) <- c('wt_R1', 'wt_R2', 'wt_R3')
+rownames(mat) <- paste0('gene_', 1:3)
+
+tpm_norm <- colSums(mat)/10
