@@ -6,3 +6,8 @@
 Faculty of Sciences & Technologies  
 Haute-Ecole en Hainaut (HEH)  
 October 2022
+
+#### TODO: future improvements
+- [ ] Add all code examples from slides in a readily available R script(s)
+- [ ] Produce a set of slides *without* answers to the questions
+- [ ] Produce a set of slides *with* answers to the questions (provided after each teaching session)
