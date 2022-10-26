@@ -13,3 +13,14 @@ colnames(iris)
 rownames(iris)
 View(iris)
 
+# get the “Petal.Width” column:
+  # 1. still in a dataframe
+
+  # 2. as a simple vector
+
+# For “Petal.Width” column, calculate: sum, mean, max, min
+
+# coerce to a matrix - what happened?
+as.matrix(iris)
+
+
